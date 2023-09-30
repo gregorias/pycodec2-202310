@@ -23,14 +23,14 @@ jobs:
 
       - name: Install codec2 on Ubuntu
         run: |
-          if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+          if [ "${{ matrix.os }}" == "ubuntu-22.04" ]; then
             sudo apt-get update -q
             sudo apt-get install -y codec2  # Install codec2 package on Ubuntu
           fi
 
       - name: Install codec2 on macOS
         run: |
-          if [ "${{ matrix.os }}" == "macos-latest" ]; then
+          if [ "${{ matrix.os }}" == "macOS-13" ]; then
             brew update
             brew install codec2  # Install codec2 package on macOS
           fi
