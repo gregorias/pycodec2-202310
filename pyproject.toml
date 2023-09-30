@@ -16,4 +16,6 @@ readme = "README.md"
 #
 # Using at least Python 3.9, because as of 2023-09, 3.8 is outdated.
 requires-python = ">=3.9"
-authors = ["Grzegorz Milka <grzegorzmilka@gmail.com>"]
+# Authors are defined in setup.py.
+# https://discuss.python.org/t/adding-extra-fields-in-the-pyproject-toml-authors-maintainers-list/16848/3
+dynamic = ["authors"]
