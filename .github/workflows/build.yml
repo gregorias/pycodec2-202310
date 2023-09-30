@@ -22,18 +22,16 @@ jobs:
         run: python -m pip install cibuildwheel==2.16.1
 
       - name: Install codec2 on Ubuntu
+        if: matrix.os == 'ubuntu-22.04'
         run: |
-          if [ "${{ matrix.os }}" == "ubuntu-22.04" ]; then
-            sudo apt-get update -q
-            sudo apt-get install -y codec2  # Install codec2 package on Ubuntu
-          fi
+          sudo apt-get update -q
+          sudo apt-get install -y codec2  # Install codec2 package on Ubuntu
 
       - name: Install codec2 on macOS
+        if: matrix.os == 'macOS-13'
         run: |
-          if [ "${{ matrix.os }}" == "macOS-13" ]; then
-            brew update
-            brew install codec2  # Install codec2 package on macOS
-          fi
+          brew update
+          brew install codec2  # Install codec2 package on macOS
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
