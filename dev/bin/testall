@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -o verbose
+mypy pycodec2/ test && \
+python -m unittest discover -s test/ -t .

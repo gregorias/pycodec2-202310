@@ -1,0 +1,20 @@
+pre-commit:
+  commands:
+    toml-taplo:
+      tags: style
+      glob: "*.toml"
+      run: taplo check {staged_files}
+    unit-tests:
+      run: "./dev/bin/testall"
+    yaml-prettier:
+      tags: style
+      glob: "*.{yml,yaml}"
+      run: prettier -c {staged_files}
+    yapf:
+      tags: style
+      glob: "*.py"
+      run: yapf -i -r {staged_files} && git add {staged_files}
+commit-msg:
+  commands:
+    commitlint:
+      run: "commitlint --edit={1}"
