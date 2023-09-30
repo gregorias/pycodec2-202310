@@ -3,11 +3,7 @@
 # You need to keep it in sync with development dependencies specified in
 # Pipfile.
 [build-system]
-requires = [
-  "Cython==3.*",
-  "numpy==1.26.*",
-  "setuptools",
-]
+requires = ["Cython==3.*", "numpy==1.26.*", "setuptools"]
 # Required table with required fields: https://peps.python.org/pep-0621/#table-name.
 [project]
 name = "pycodec2"
@@ -20,3 +16,4 @@ readme = "README.md"
 #
 # Using at least Python 3.9, because as of 2023-09, 3.8 is outdated.
 requires-python = ">=3.9"
+authors = ["Grzegorz Milka <grzegorzmilka@gmail.com>"]
