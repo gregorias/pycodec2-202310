@@ -12,6 +12,8 @@ requires = [
 [project]
 name = "pycodec2"
 version = "2.1.0"
+description = "A Cython wrapper for codec2"
+readme = "README.md"
 # Necessary for cibuildwheel not to use an old python that may have old
 # libraries. E.g., python 3.6 does not have numpy 1.26.
 # https://cibuildwheel.readthedocs.io/en/stable/options/#requires-python
