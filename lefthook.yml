@@ -4,8 +4,6 @@ pre-commit:
       tags: style
       glob: "*.toml"
       run: taplo check {staged_files}
-    unit-tests:
-      run: "./dev/bin/testall"
     yaml-prettier:
       tags: style
       glob: "*.{yml,yaml}"

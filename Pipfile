@@ -5,11 +5,15 @@ name = "pypi"
 
 [packages]
 
+# Keep these in sync with pyproject.toml. You can exclude "build" and type
+# stubs.
 [dev-packages]
 build = "==1.*"
 Cython = "==3.*"
 numpy = "==1.26.*"
 setuptools = "*"
+# These are for types for development only.
+types-setuptools = "*"
 
 [requires]
 python_version = "3.11"
