@@ -25,7 +25,7 @@ jobs:
         if: matrix.os == 'ubuntu-22.04'
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y codec2  # Install codec2 package on Ubuntu
+          sudo apt-get install -y codec2 libcodec2-dev  # Install codec2 package on Ubuntu
 
       - name: Install codec2 on macOS
         if: matrix.os == 'macOS-13'
