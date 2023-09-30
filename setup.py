@@ -3,8 +3,6 @@ from Cython.Build import cythonize
 from setuptools import Extension, setup
 import numpy as np
 
-VERSION = '2.1.0'
-
 # Extension API reference:
 # https://setuptools.pypa.io/en/latest/userguide/ext_modules.html.
 ext_modules = [
@@ -30,22 +28,10 @@ with open('README.md') as readme_file:
     long_description = readme_file.read()
 
 setup(
-    name="pycodec2",
-    version=VERSION,
     packages=['pycodec2'],
-    description='A Cython wrapper for codec2',
     ext_modules=cythonize(ext_modules),
-    long_description=long_description,
-    long_description_content_type='text/markdown',
     author='Grzegorz Milka',
     author_email='grzegorzmilka@gmail.com',
     url='https://github.com/gregorias/pycodec2',
-    keywords=['codec2', 'audio', 'voice'],
-    classifiers=[
-        'Topic :: Multimedia :: Sound/Audio :: Speech',
-        'License :: OSI Approved :: BSD License',
-        'Programming Language :: Python :: 3',
-        'Development Status :: 5 - Production/Stable',
-    ],
     cmdclass={'build_ext': Cython.Build.build_ext},
 )
