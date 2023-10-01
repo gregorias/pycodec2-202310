@@ -19,8 +19,8 @@ jobs:
     strategy:
       matrix:
         # Supported runners: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+        # Not supporting Windows, because there's no codec2 package for Windows' package manager.
         os: [ubuntu-22.04, macOS-13]
-        # os: [ubuntu-22.04, windows-2022, macOS-13]
 
     steps:
       - uses: actions/checkout@v4
