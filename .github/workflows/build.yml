@@ -11,7 +11,7 @@ env:
   # CIBW_BEFORE_ALL. Unless someone complains, it's not worth it.
   # Don't support pp10, because I couldn't get to build. Numpy complains about
   # missing BLAS.
-  CIBW_SKIP: "*musllinux* pp10*"
+  CIBW_SKIP: "*musllinux* pp310*"
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
